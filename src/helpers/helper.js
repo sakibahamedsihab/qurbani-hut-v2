@@ -1,5 +1,7 @@
 async function getData() {
-  const res = await fetch("https://qurbani-hut-v2-xxxv.vercel.app/data.json");
+  const res = await fetch("https://qurbani-hut-v2-xxxv.vercel.app/data.json", {
+    cache: "no-store",
+  });
   const data = await res.json();
   return data;
 }
