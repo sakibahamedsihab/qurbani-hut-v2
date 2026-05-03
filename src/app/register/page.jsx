@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { User, Mail, Link as LinkIcon, Lock, Globe } from "lucide-react";
 import Link from "next/link";
+import { authClient } from "@/lib/auth-client";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
 
@@ -22,46 +23,46 @@ export default function RegisterPage() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  //   // Client-side validation before hitting the server
-  //   if (formData.password.length < 8) {
-  //     toast.error("Password must be at least 8 characters long");
-  //     return;
-  //   }
+    // Client-side validation before hitting the server
+    if (formData.password.length < 8) {
+      toast.error("Password must be at least 8 characters long");
+      return;
+    }
 
-  //   setLoading(true);
+    setLoading(true);
 
-  //   const { error } = await authClient.signUp.email({
-  //     email: formData.email,
-  //     password: formData.password,
-  //     name: formData.name,
-  //     image: formData.image,
-  //     // ✅ NO callbackURL here — email signup never leaves the app
-  //     // so we redirect manually with router.push() below
-  //   });
+    const { error } = await authClient.signUp.email({
+      email: formData.email,
+      password: formData.password,
+      name: formData.name,
+      image: formData.image,
+      // ✅ NO callbackURL here — email signup never leaves the app
+      // so we redirect manually with router.push() below
+    });
 
-  //   setLoading(false);
+    setLoading(false);
 
-  //   if (error) {
-  //     toast.error(error.message || "Registration failed. Please try again.");
-  //     return;
-  //   }
+    if (error) {
+      toast.error(error.message || "Registration failed. Please try again.");
+      return;
+    }
 
-  //   // Success — session is auto-created by Better Auth
-  //   // Send user to login so they sign in fresh
-  //   toast.success("Account created successfully!");
-  //   router.push("/login");
-  // };
+    // Success — session is auto-created by Better Auth
+    // Send user to login so they sign in fresh
+    toast.success("Account created successfully!");
+    router.push("/login");
+  };
 
-  // const handleGoogleRegister = async () => {
-  //   // ✅ callbackURL ONLY works here — Google OAuth leaves and comes back
-  //   await authClient.signIn.social({
-  //     provider: "google",
-  //     callbackURL: "/",
-  //   });
-  // };
+  const handleGoogleRegister = async () => {
+    // ✅ callbackURL ONLY works here — Google OAuth leaves and comes back
+    await authClient.signIn.social({
+      provider: "google",
+      callbackURL: "/",
+    });
+  };
 
   return (
     <section className="bg-linear-to-r from-green-50 via-sky-50 to-slate-50 p-10">
@@ -77,7 +78,7 @@ export default function RegisterPage() {
             </p>
           </div>
 
-          <form className="space-y-5">
+          <form onSubmit={handleSubmit} className="space-y-5">
             {/* Full Name */}
             <div className="space-y-1">
               <label className="text-sm font-semibold text-gray-700 ml-1">
@@ -186,7 +187,7 @@ export default function RegisterPage() {
 
           {/* Google Register */}
           <button
-            // onClick={handleGoogleRegister}
+            onClick={handleGoogleRegister}
             className="w-full border border-gray-200 py-3 rounded-xl flex items-center justify-center gap-3 hover:bg-gray-50 transition-all font-medium text-gray-700"
           >
             <Globe size={20} className="text-blue-500" />

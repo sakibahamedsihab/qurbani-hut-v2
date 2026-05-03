@@ -35,7 +35,7 @@ export default function CowDetailPage({ cow }) {
             </div>
             <div className="flex items-center gap-2 text-gray-600">
               <Calendar size={20} className="text-[#1A6B3C]" />
-              <span>Age: {cow.age} months</span>
+              <span>Age: {cow.age} years</span>
             </div>
           </div>
         </div>

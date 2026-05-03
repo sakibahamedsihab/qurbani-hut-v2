@@ -10,10 +10,10 @@ const marketplaceLinks = [
 ];
 
 const categoryLinks = [
-  { label: "Brahma Bulls", href: "/animals?type=brahma" },
-  { label: "Local Sahiwal", href: "/animals?type=sahiwal" },
-  { label: "Premium Goats", href: "/animals?type=goat" },
-  { label: "Camel and Sheep", href: "/animals?type=camel" },
+  { label: "Brahma Bulls", href: "/all-animals" },
+  { label: "Local Sahiwal", href: "/all-animals" },
+  { label: "Premium Goats", href: "/all-animals" },
+  { label: "Camel and Sheep", href: "/all-animals" },
 ];
 
 export default function Footer() {
@@ -59,8 +59,8 @@ export default function Footer() {
             Categories
           </h4>
           <ul className="space-y-2.5">
-            {categoryLinks.map((link) => (
-              <li key={link.href}>
+            {categoryLinks.map((link, index) => (
+              <li key={index}>
                 <Link
                   href={link.href}
                   className="text-sm text-gray-500 hover:text-[#0d6b4a] transition-colors"

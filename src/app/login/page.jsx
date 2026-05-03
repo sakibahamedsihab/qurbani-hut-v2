@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Mail, Lock, LogIn, Globe } from "lucide-react";
 import Link from "next/link";
 import toast from "react-hot-toast";
-// import { authClient } from "@/lib/auth-client";
+import { authClient } from "@/lib/auth-client";
 import { useRouter } from "next/navigation";
 
 export default function LoginPage() {
