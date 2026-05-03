@@ -18,33 +18,33 @@ export default function LoginPage() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  //   if (!formData.email || !formData.password) {
-  //     toast.error("Please fill in all fields");
-  //     return;
-  //   }
+    if (!formData.email || !formData.password) {
+      toast.error("Please fill in all fields");
+      return;
+    }
 
-  //   const { data, error } = await authClient.signIn.email({
-  //     email: formData.email,
-  //     password: formData.password,
-  //   });
+    const { data, error } = await authClient.signIn.email({
+      email: formData.email,
+      password: formData.password,
+    });
 
-  //   if (error) {
-  //     toast.error(error.message || "Invalid credentials!");
-  //   } else {
-  //     toast.success("Welcome Back!");
-  //     router.push("/");
-  //   }
-  // };
+    if (error) {
+      toast.error(error.message || "Invalid credentials!");
+    } else {
+      toast.success("Welcome Back!");
+      router.push("/");
+    }
+  };
 
-  // const handleGoogleLogin = async () => {
-  //   await authClient.signIn.social({
-  //     provider: "google",
-  //     callbackURL: "/",
-  //   });
-  // };
+  const handleGoogleLogin = async () => {
+    await authClient.signIn.social({
+      provider: "google",
+      callbackURL: "/",
+    });
+  };
 
   return (
     <section className="bg-linear-to-r from-green-50 via-sky-50 to-slate-50 p-10">
@@ -62,7 +62,7 @@ export default function LoginPage() {
             </p>
           </div>
 
-          <form className="space-y-5">
+          <form onSubmit={handleSubmit} className="space-y-5">
             {/* Email */}
             <div className="space-y-1">
               <label className="text-sm font-semibold text-gray-700">
@@ -132,7 +132,7 @@ export default function LoginPage() {
 
           {/* Google Login */}
           <button
-            // onClick={handleGoogleLogin}
+            onClick={handleGoogleLogin}
             className="w-full border border-gray-200 py-3 rounded-xl flex items-center justify-center gap-3 hover:bg-gray-50 transition-all font-medium text-gray-700 shadow-sm"
           >
             <Globe size={18} className="text-blue-500" />
