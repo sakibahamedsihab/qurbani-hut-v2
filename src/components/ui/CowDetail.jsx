@@ -3,9 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { Tag, Calendar, Weight, MapPin, HeartPulse } from "lucide-react";
 import BookingForm from "./BookingForm";
+import { authClient } from "@/lib/auth-client";
 
 export default function CowDetailPage({ cow }) {
-  const isLoggedIn = true;
+  const { data: session } = authClient.useSession();
 
   return (
     <div className="grid grid-cols-2 gap-5">
@@ -53,7 +54,7 @@ export default function CowDetailPage({ cow }) {
           </p>
         </div>
       </div>
-      {isLoggedIn ? (
+      {session ? (
         <BookingForm cow={cow} />
       ) : (
         <div className="p-4 bg-yellow-100 text-yellow-800 rounded">

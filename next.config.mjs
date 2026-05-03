@@ -8,6 +8,9 @@ const nextConfig = {
       {
         hostname: "placehold.co",
       },
+      {
+        hostname: "lh3.googleusercontent.com",
+      },
     ],
   },
 };
