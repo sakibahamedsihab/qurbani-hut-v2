@@ -90,20 +90,20 @@ const tips = [
 
 export default function QurbaniTips() {
   return (
-    <section className="py-16 bg-linear-to-r from-green-50 via-sky-50 to-slate-50">
-      <div className="max-w-5xl mx-auto">
+    <section className="py-12 sm:py-16 bg-linear-to-r from-green-50 via-sky-50 to-slate-50">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-8">
         {/* Header */}
-        <div className="text-center mb-10">
-          <h2 className="text-3xl font-bold text-[#0d4a3a] mb-3">
+        <div className="text-center mb-8 sm:mb-10">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#0d4a3a] mb-2 sm:mb-3">
             Expert Qurbani Tips
           </h2>
-          <p className="text-gray-500 text-sm">
+          <p className="text-xs sm:text-sm text-gray-500">
             Essential guidance for a meaningful and hygienic Qurbani experience.
           </p>
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {tips.map((tip) => (
             <div
               key={tip.id}

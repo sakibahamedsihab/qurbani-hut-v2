@@ -8,9 +8,11 @@ export default async function Feature() {
 
   return (
     <section className="py-10 bg-linear-to-r from-green-50 via-sky-50 to-slate-50">
-      <div className="max-w-6xl mx-auto  space-y-5">
-        <h1 className="text-2xl text-[#1A6B3C] font-bold">Feature Section</h1>
-        <main className="grid grid-cols-4 gap-5">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 space-y-5">
+        <h1 className="text-xl sm:text-2xl text-[#1A6B3C] font-bold">
+          Feature Section
+        </h1>
+        <main className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-5">
           {firstFourCows.map((item) => (
             <CowCard key={item.id} item={item} />
           ))}
