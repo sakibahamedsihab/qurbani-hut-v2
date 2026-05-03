@@ -22,7 +22,7 @@ export default function CowCard({ item }) {
     <div className="bg-white rounded-lg shadow-sm">
       {/* image */}
       <div className="relative w-full h-58">
-        <Image src={image} alt={name} fill />
+        <Image src={image} alt={name} fill className="object-cover rounded-t-lg" />
         <Chip className="bg-amber-500 text-xs absolute rounded-lg px-2 py-1 top-3 right-3 text-white">
           {breed}
         </Chip>

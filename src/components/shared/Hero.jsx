@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative w-full h-[480px] md:h-[560px]">
+    <section className="relative w-full md:h-[560px]">
       {/* Background Image */}
       <Image
         src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1600&auto=format"

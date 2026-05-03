@@ -13,7 +13,7 @@ export default async function DetailPage({ params }) {
 
   console.log(cow);
   return (
-    <section className="bg-linear-to-r from-green-50 via-sky-50 to-slate-50">
+    <section className="bg-linear-to-r from-green-50 via-sky-50 to-slate-50 py-10">
       <div className="flex flex-col gap-5 max-w-6xl mx-auto">
         <Link
           href={"/all-animals"}
