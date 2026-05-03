@@ -25,7 +25,7 @@
     "description": "Premium quality Sahiwal bull, extremely calm nature.",
     "image": "https://images.unsplash.com/photo-1570042225831-d98fa7577f1e?auto=format&fit=crop&w=600&q=80",
     "category": "Large Animal",
-    "health": "Vaccinated, Good"
+    "health": "Vaccinated"
   },
   {
     "id": 3,
@@ -53,7 +53,7 @@
     "description": "Tall and healthy Jamunapari, perfect for breeding or Qurbani.",
     "image": "https://images.pexels.com/photos/13065725/pexels-photo-13065725.jpeg",
     "category": "Small Animal",
-    "health": "Dewormed, Very Good"
+    "health": "Dewormed"
   },
   {
     "id": 5,
@@ -81,7 +81,7 @@
     "description": "Large Totapuri breed with distinctive long ears.",
     "image": "https://images.pexels.com/photos/37197919/pexels-photo-37197919.jpeg",
     "category": "Small Animal",
-    "health": "Vaccinated, Excellent"
+    "health": "Vaccinated"
   },
   {
     "id": 7,
@@ -137,7 +137,7 @@
     "description": "Energetic Beetal goat, raised in a free-range farm.",
     "image": "https://images.pexels.com/photos/18928303/pexels-photo-18928303.jpeg",
     "category": "Small Animal",
-    "health": "Vaccinated, Good"
+    "health": "Vaccinated"
   },
   {
     "id": 11,
@@ -165,6 +165,6 @@
     "description": "Pure white local goat, completely organic feed.",
     "image": "https://images.pexels.com/photos/37175681/pexels-photo-37175681.jpeg",
     "category": "Small Animal",
-    "health": "Dewormed, Excellent"
+    "health": "Dewormed"
   }
 ]
