@@ -1,8 +1,6 @@
-// app/all-animals/loading.jsx
-
 export default function Loading() {
   return (
-    <section className="bg-gradient-to-r from-green-50 via-sky-50 to-slate-50 py-8 sm:py-10 min-h-screen">
+    <section className="bg-linear-to-r from-green-50 via-sky-50 to-slate-50 py-8 sm:py-10 min-h-screen">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
         <div className="h-8 w-40 bg-gray-200 rounded-lg animate-pulse mb-6" />
 

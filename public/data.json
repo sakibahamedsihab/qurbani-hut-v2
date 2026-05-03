@@ -51,7 +51,7 @@
     "age": 2.5,
     "location": "Kushtia",
     "description": "Tall and healthy Jamunapari, perfect for breeding or Qurbani.",
-    "image": "https://images.unsplash.com/photo-1615806653063-47962dfabcc1?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.pexels.com/photos/13065725/pexels-photo-13065725.jpeg",
     "category": "Small Animal",
     "health": "Dewormed, Very Good"
   },
@@ -79,7 +79,7 @@
     "age": 3,
     "location": "Jessore",
     "description": "Large Totapuri breed with distinctive long ears.",
-    "image": "https://images.unsplash.com/photo-1582260384813-f9ceee04958d?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.pexels.com/photos/37197919/pexels-photo-37197919.jpeg",
     "category": "Small Animal",
     "health": "Vaccinated, Excellent"
   },
@@ -107,7 +107,7 @@
     "age": 2,
     "location": "Gazipur",
     "description": "Heavyweight Boer cross goat, highly muscular.",
-    "image": "https://images.unsplash.com/photo-1528659837947-f37b6070a24d?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.pexels.com/photos/29215138/pexels-photo-29215138.jpeg",
     "category": "Small Animal",
     "health": "Excellent"
   },
@@ -135,7 +135,7 @@
     "age": 2,
     "location": "Mymensingh",
     "description": "Energetic Beetal goat, raised in a free-range farm.",
-    "image": "https://images.unsplash.com/photo-1600004212555-6b45d0ed3796?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.pexels.com/photos/18928303/pexels-photo-18928303.jpeg",
     "category": "Small Animal",
     "health": "Vaccinated, Good"
   },
@@ -149,7 +149,7 @@
     "age": 4.5,
     "location": "Comilla",
     "description": "Massive Brahman cross bull, perfect for the main attraction.",
-    "image": "https://images.unsplash.com/photo-1533036499877-338271775aeb?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.pexels.com/photos/11767972/pexels-photo-11767972.jpeg",
     "category": "Large Animal",
     "health": "Excellent"
   },
@@ -163,7 +163,7 @@
     "age": 1.5,
     "location": "Sylhet",
     "description": "Pure white local goat, completely organic feed.",
-    "image": "https://images.unsplash.com/photo-1614766858189-e15f4ec2820c?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.pexels.com/photos/37175681/pexels-photo-37175681.jpeg",
     "category": "Small Animal",
     "health": "Dewormed, Excellent"
   }
