@@ -17,7 +17,6 @@ export default function RegisterPage() {
     password: "",
   });
 
-  // Updates only the changed field, keeps the rest
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -26,7 +25,6 @@ export default function RegisterPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Client-side validation before hitting the server
     if (formData.password.length < 8) {
       toast.error("Password must be at least 8 characters long");
       return;
@@ -39,8 +37,6 @@ export default function RegisterPage() {
       password: formData.password,
       name: formData.name,
       image: formData.image,
-      // ✅ NO callbackURL here — email signup never leaves the app
-      // so we redirect manually with router.push() below
     });
 
     setLoading(false);
@@ -50,14 +46,11 @@ export default function RegisterPage() {
       return;
     }
 
-    // Success — session is auto-created by Better Auth
-    // Send user to login so they sign in fresh
     toast.success("Account created successfully!");
     router.push("/login");
   };
 
   const handleGoogleRegister = async () => {
-    // ✅ callbackURL ONLY works here — Google OAuth leaves and comes back
     await authClient.signIn.social({
       provider: "google",
       callbackURL: "/",
