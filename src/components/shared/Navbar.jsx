@@ -39,6 +39,7 @@ export default function Navbar() {
             All Animals
           </li>
         </Link>
+        {session && <Link href={"/profile"}>My Profile</Link>}
       </ul>
 
       {/* Desktop Auth Section */}

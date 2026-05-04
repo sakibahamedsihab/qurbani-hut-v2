@@ -2,6 +2,8 @@ import { getDatWithId } from "@/helpers/helper";
 import CowDetailPage from "@/components/ui/CowDetail";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
+import { Suspense } from "react";
+import { Spinner } from "@heroui/react";
 
 export default async function DetailPage({ params }) {
   const { id } = await params;
@@ -21,7 +23,9 @@ export default async function DetailPage({ params }) {
         >
           <ArrowLeft size={20} className="sm:w-6 sm:h-6" /> Back to All Animals
         </Link>
-        <main>{<CowDetailPage key={cow.id} cow={cow} />}</main>
+        <main>
+            {<CowDetailPage key={cow.id} cow={cow} />}
+        </main>
       </div>
     </section>
   );

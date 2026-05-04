@@ -140,7 +140,6 @@ export default function RegisterPage() {
                   onChange={handleChange}
                   placeholder="https://image-url.com/profile.jpg"
                   className="w-full border p-2.5 pl-10 rounded-xl outline-none focus:ring-2 focus:ring-[#1A6B3C]/20 focus:border-[#1A6B3C] transition-all"
-                  required
                 />
               </div>
             </div>

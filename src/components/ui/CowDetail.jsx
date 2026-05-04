@@ -12,7 +12,12 @@ export default function CowDetailPage({ cow }) {
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-5 md:gap-6">
       <div className="space-y-4 sm:space-y-5 md:space-y-6">
         <div className="relative h-64 sm:h-80 md:h-96 w-full overflow-hidden rounded-2xl shadow-lg">
-          <Image src={cow.image} alt={cow.name} fill className="object-cover" />
+            <Image
+              src={cow.image}
+              alt={cow.name}
+              fill
+              className="object-cover"
+            />
         </div>
 
         <div className="bg-white p-4 sm:p-5 md:p-6 rounded-2xl shadow-sm border border-gray-100">

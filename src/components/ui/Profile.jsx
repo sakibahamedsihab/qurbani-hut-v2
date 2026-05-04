@@ -87,7 +87,7 @@ export default function Profile() {
         </div>
 
         {/* Update button */}
-        <Link href="/my-profile/update">
+        <Link href="/profile/update-profile">
           <button className="w-full flex items-center justify-center gap-2 bg-[#0d6b4a] hover:bg-[#0a5a3d] text-white font-semibold text-sm py-3 rounded-xl transition-colors">
             <Pencil size={15} />
             Update Profile
